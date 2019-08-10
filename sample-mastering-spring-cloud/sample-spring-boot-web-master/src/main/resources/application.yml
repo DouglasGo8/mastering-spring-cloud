@@ -1,0 +1,52 @@
+spring:
+ application:
+  name: web-master
+ data:
+  mongodb:
+   database: person
+   host: localhost
+   port: 27017
+   
+logging:
+  pattern:
+    console: "%d{HH:mm:ss.SSS} %-5level %logger{36} - %msg%n"
+    file: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
+#  level:
+#    org.springframework.web: DEBUG
+  file: app.log
+---
+spring:
+ profiles: zone1
+eureka:
+ instance:
+  metadataMap:
+   zone: zone1
+ client:
+  serviceUrl: 
+   defaultZone: http://localhost:8761/eureka/
+server:
+ port: ${PORT:10206}  
+---
+spring:
+ profiles: zone2
+eureka:
+ instance:
+  metadataMap:
+   zone: zone2
+ client:
+  serviceUrl: 
+   defaultZone: http://localhost:8762/eureka/
+server:
+ port: ${PORT:10207}
+---
+spring:
+ profiles: zone3
+eureka:
+ instance:
+  metadataMap:
+   zone: zone3
+ client:
+  serviceUrl: 
+   defaultZone: http://localhost:8761/eureka/
+server:
+ port: ${PORT:10208}
