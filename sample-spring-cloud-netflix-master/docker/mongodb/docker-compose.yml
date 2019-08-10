@@ -1,0 +1,28 @@
+
+
+version: '3.1'
+
+services:
+ mongodb:
+  image: mongo
+  container_name: mongodb
+  volumes:
+   - mongodb:/data/db
+   - mongodb_config:/data/config
+  ports:
+   - "27017:27017"
+  environment:
+   MONGO_INITDB_ROOT_USERNAME: guest
+   MONGO_INITDB_ROOT_PASSWORD: welcome1
+   
+  command: mongod
+  networks:
+   - mongo-compose-network
+   
+volumes:
+ mongodb:
+ mongodb_config:
+ 
+networks: 
+ mongo-compose-network:
+  driver: bridge
