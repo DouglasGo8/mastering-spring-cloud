@@ -1,5 +1,5 @@
 #  sample-client-service
-Add instructions for project developers here.
+https://github.com/PacktPublishing/Mastering-Spring-Cloud
 
 # Refs
 mvn spring-boot:run -D"spring.profiles.active"=zone1
