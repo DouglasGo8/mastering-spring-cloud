@@ -1,0 +1,60 @@
+
+
+---
+spring:
+ application:
+  name: client-service
+
+logging:
+  pattern:
+    console: "%d{HH:mm:ss.SSS} %-5level %logger{36} - %msg%n"
+    file: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
+  level:
+    org.springframework.web: DEBUG  
+    
+---
+
+spring:
+ profiles: zone1
+eureka:
+ instance:
+  metadataMap:
+   zone: zone1
+ client:
+  serviceUrl:
+   defaultZone: http://localhost:8761/eureka/
+server:
+  port: ${PORT:10208}
+ 
+ 
+---
+
+spring:
+ profiles: zone2
+eureka:
+ instance:
+  metadataMap:
+   zone: zone2
+ client:
+  serviceUrl:
+   defaultZone: http://localhost:8762/eureka/
+   
+server:
+  port: ${PORT:10209}
+  
+  
+  
+---
+
+spring:
+ profiles: zone3
+eureka:
+ instance:
+  metadataMap:
+   zone: zone3
+ client:
+  serviceUrl:
+   defaultZone: http://localhost:8763/eureka/
+   
+server:
+  port: ${PORT:10210}
