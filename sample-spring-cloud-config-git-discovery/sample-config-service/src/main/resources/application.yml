@@ -1,0 +1,13 @@
+
+
+server:
+  port: ${PORT:8889}
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/DouglasGo8/spring-cloud-config-git-discovery.git
