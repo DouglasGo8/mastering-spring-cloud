@@ -1,4 +1,5 @@
-package packt.dbatista.services.sample.client;
+package packt.dbatista.services.sample.discovery.service.dbatista.services.sample.client;
+
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,34 +14,34 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-/**
- *
- */
-@EnableDiscoveryClient
 @SpringBootApplication
+@EnableDiscoveryClient
 public class SampleClientServiceApplication {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(ClientServiceController.class);
 
     public static void main(String[] args) {
         SpringApplication.run(SampleClientServiceApplication.class, args);
     }
 
-
     @RestController
-    private class ClientController {
-
-        private final Logger LOGGER = LoggerFactory.getLogger(ClientController.class);
+    public class ClientServiceController {
 
         @Autowired
         private DiscoveryClient discoveryClient;
 
+
         @GetMapping("/ping")
         public List<ServiceInstance> ping() {
+
             List<ServiceInstance> instances = discoveryClient.getInstances("CLIENT-SERVICE");
+
             LOGGER.info("INSTANCES: count={}", instances.size());
+
             instances.forEach(it -> LOGGER.info("INSTANCE: id={}, port={}", it.getServiceId(), it.getPort()));
+
             return instances;
+
         }
     }
-
-
 }
