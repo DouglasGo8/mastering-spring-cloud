@@ -11,3 +11,6 @@ spring:
       server:
         git:
           uri: https://github.com/DouglasGo8/spring-cloud-config-git-discovery.git
+          username: DouglasGo8
+          password: Wynardtag3
+          cloneOnStart: true
