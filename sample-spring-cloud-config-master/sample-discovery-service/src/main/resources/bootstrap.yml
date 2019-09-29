@@ -7,3 +7,8 @@ spring:
   cloud:
     config:
       uri: http://localhost:8889
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
