@@ -41,5 +41,7 @@
 
     <modules>
         <module>sample-config-service</module>
+        <module>sample-discovery-service</module>
+        <module>sample-client-service</module>
     </modules>
 </project>

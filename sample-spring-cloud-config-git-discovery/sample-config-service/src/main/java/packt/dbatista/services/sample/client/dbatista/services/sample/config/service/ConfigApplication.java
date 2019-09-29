@@ -1,4 +1,4 @@
-package packt.dbatista.services.sample.config.service;
+package packt.dbatista.services.sample.client.dbatista.services.sample.config.service;
 
 
 import org.springframework.boot.SpringApplication;
