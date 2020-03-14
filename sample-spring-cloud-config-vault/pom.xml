@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project
+        xmlns="http://maven.apache.org/POM/4.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>packt.dbatista.services</groupId>
-    <artifactId>sample-spring-cloud-config-git-discovery</artifactId>
+    <artifactId>sample-spring-cloud-config-vault</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <packaging>pom</packaging>
 
-    <name>Sample :: Spring :: Cloud :: Config :: Git :: Discovery</name>
+    <name>Sample :: Spring :: Cloud :: Config :: Vault :: Discovery</name>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -30,20 +32,8 @@
         </dependencies>
     </dependencyManagement>
 
-    <dependencies>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <scope>provided</scope>
-        </dependency>
-
-    </dependencies>
-
-
     <modules>
         <module>sample-config-service</module>
-        <module>sample-discovery-service</module>
-        <module>sample-client-service</module>
     </modules>
+
 </project>
