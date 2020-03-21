@@ -8,7 +8,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>packt</groupId>
+    <groupId>packt.dbatista.services.sample.config.service</groupId>
     <artifactId>sample-config-service</artifactId>
     <version>1.0-SNAPSHOT</version>
 
