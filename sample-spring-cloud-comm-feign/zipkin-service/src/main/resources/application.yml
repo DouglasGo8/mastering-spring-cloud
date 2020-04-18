@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: zipkin-serive
+server:
+  port: ${PORT:9411}
