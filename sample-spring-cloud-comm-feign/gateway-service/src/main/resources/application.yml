@@ -9,7 +9,6 @@ eureka:
     serviceUrl:
       defautZone: http://localhost:8761/eureka/
     register-with-eureka: false
-
 zuul:
   prefix: /api
   routes:
